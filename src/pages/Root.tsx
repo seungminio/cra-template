@@ -23,9 +23,6 @@ export default () => {
     <ServiceWrapper>
       <img src={LogoAfterSVG} style={{ width: 0, height: 0 }} />
       <Container>
-        {/* <Logo src={require('../assets/logo.png')} />
-         */}
-
         <LogoWrap>
           {logo ? (
             <img src={LogoAfterSVG} />
