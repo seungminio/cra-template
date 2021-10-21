@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
-import { Finance, Root } from '../pages';
+import Root from '../pages/Root';
+import Finance from '../pages/Finance';
 
 const App: React.FC = () => (
   <BrowserRouter>

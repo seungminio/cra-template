@@ -7,8 +7,10 @@ import ReactVivus from 'react-vivus';
 
 import LogoSVG from '../assets/logo.svg';
 import LogoAfterSVG from '../assets/after.svg';
+import { useHistory } from 'react-router';
 
 export default () => {
+  const history = useHistory();
   const [logo, setLogo] = useState<boolean>(false);
 
   useEffect(() => {
@@ -44,6 +46,9 @@ export default () => {
           <br />
           자동차 금융의 시작, 비티오개러지.
         </Description>
+        <Button onClick={() => history.push('/finance')}>
+          <ButtonText>자동차금융사업부 알아보기</ButtonText>
+        </Button>
       </Container>
     </ServiceWrapper>
   );
@@ -70,4 +75,37 @@ const Description = styled.span`
   font-size: 24px;
   line-height: 1.5;
   letter-spacing: 4px;
+`;
+
+const Button = styled.button`
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border: 0;
+  background: none;
+  padding: 19px 28px;
+  border: solid 1px #ffffff;
+  text-decoration: none;
+  margin-top: 28px;
+  cursor: pointer;
+  &:hover {
+    background: #ffffff;
+    & > span {
+      color: black;
+    }
+    & svg path {
+      fill: black;
+    }
+  }
+  @media all and (max-width: 720px) {
+    display: none;
+  }
+`;
+
+const ButtonText = styled.span`
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
 `;
