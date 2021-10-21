@@ -7,6 +7,15 @@
     <meta name="description" content="자동차 금융의 시작, 비티오개러지." />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script type="text/javascript">
+      var agent = navigator.userAgent.toLowerCase();
+      if (-1 != agent.indexOf('msie')) {
+        window.alert(
+          'Internet Explorer는 지원하지 않습니다.\nChrome으로 다시 접속해주세요.',
+        );
+        window.location.href = 'https://www.google.com/chrome/';
+      }
+    </script>
     <title>비티오개러지 BTO GARAGE Corp.</title>
   </head>
   <body>
